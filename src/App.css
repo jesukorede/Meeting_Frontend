@@ -61,7 +61,7 @@ body, html {
 }
 
 body {
-  background-image: url('src/assets/ALCI.jpeg'); /* Replace with your image URL */
+  background-image: url("src/assets/ALCI.jpeg"); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
