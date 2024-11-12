@@ -4,7 +4,7 @@ import QRCode from 'qrcode';
 import './App.css';
 
 // Replace with your deployed backend URL on Render
-const baseURL = 'https://your-backend-app.onrender.com';
+const baseURL = 'https://eklektos-server-app-1.onrender.com';
 
 function App() {
     const [name, setName] = useState('');
