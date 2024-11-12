@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode';
-import './styles.css';
+import './App.css';
 
 // Replace with your deployed backend URL on Render
 const baseURL = 'https://your-backend-app.onrender.com';
@@ -54,7 +54,7 @@ function App() {
 
     return (
         <div className="container">
-            <h1>Church Meeting Registration</h1>
+            <h1>Eklektos Apostolic Network ALIC24 Registration Link</h1>
 
             <input
                 type="text"
