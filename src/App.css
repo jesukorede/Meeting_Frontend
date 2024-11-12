@@ -1,3 +1,31 @@
+body {
+  background-image: url("public/ALCI.jpeg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+img {
+  margin-top: 20px;
+  max-width: 300px;
+  height: auto;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -58,32 +86,4 @@ body, html {
   min-height: 100vh;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8); /* Adds a slight overlay for readability */
-}
-
-body {
-  background-image: url("src/assets/ALCI.jpeg"); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-input {
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-img {
-  margin-top: 20px;
-  max-width: 300px;
-  height: auto;
 }

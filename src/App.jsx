@@ -8,7 +8,7 @@ const baseURL = 'https://eklektos-server-app-1.onrender.com';
 
 function App() {
     const [name, setName] = useState('');
-    const [email, setEmail] = useState(''); // Email state
+    const [email, setEmail] = useState('');
     const [uniqueCode, setUniqueCode] = useState(null);
     const [qrCodeImage, setQrCodeImage] = useState(null);
     const [verificationMessage, setVerificationMessage] = useState(null);
