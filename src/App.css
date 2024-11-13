@@ -1,29 +1,11 @@
-body {
-  background-image: url("public/ALCI.jpeg"); /* Replace with your image URL */
+/* App.css */
+.container {
+  background-image: url('dist/ALCI.jpeg'); /* Image in public folder */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-}
-
-input {
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-img {
-  margin-top: 20px;
-  max-width: 300px;
-  height: auto;
+  height: 100vh; /* Full viewport height */
+  color: white; /* Adjust text color for visibility */
+  padding: 20px;
 }
 
 #root {

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode';
 import './App.css';
+import backgroundImage from 'dist/ALCI.jpeg'; // Import background image
 
-// Replace with your deployed backend URL on Render
+// Backend URL
 const baseURL = 'https://eklektos-server-app-1.onrender.com';
 
 function App() {
@@ -32,11 +33,7 @@ function App() {
             const qrImageUrl = await QRCode.toDataURL(`${window.location.origin}/?code=${code}`);
             setQrCodeImage(qrImageUrl);
         } catch (error) {
-            if (error.response?.status === 400) {
-                setErrorMessage(error.response.data.message);
-            } else {
-                setErrorMessage("Error generating code.");
-            }
+            setErrorMessage(error.response?.data.message || "Error generating code.");
         }
     };
 
@@ -53,7 +50,16 @@ function App() {
     };
 
     return (
-        <div className="container">
+        <div
+            className="container"
+            style={{
+                backgroundImage: `url(${backgroundImage})`,  // Set background image
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '100vh', // Optional: full viewport height
+                color: 'white', // Adjust text color for visibility
+            }}
+        >
             <h1>Eklektos Apostolic Network ALIC24 Registration Link</h1>
 
             <input
