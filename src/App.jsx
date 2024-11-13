@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode';
 import './App.css';
-import backgroundImage from 'dist/ALCI.jpeg'; // Import background image
+import backgroundImage from 'public/ALCI.jpeg'; // Import background image
 
 // Backend URL
 const baseURL = 'https://eklektos-server-app-1.onrender.com';

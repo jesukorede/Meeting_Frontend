@@ -1,6 +1,6 @@
 /* App.css */
 .container {
-  background-image: url('dist/ALCI.jpeg'); /* Image in public folder */
+  background-image: url('public/ALCI.jpeg'); /* Image in public folder */
   background-size: cover;
   background-position: center;
   height: 100vh; /* Full viewport height */
