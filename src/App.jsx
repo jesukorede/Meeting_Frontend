@@ -3,7 +3,7 @@ import axios from 'axios';
 import QRCode from 'qrcode';
 import './App.css';
 
-// Replace with your deployed backend URL on Render
+// Backend URL on Render
 const baseURL = 'https://eklektos-server-app-1.onrender.com';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     const [verifiedName, setVerifiedName] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
 
-    // Generate a unique code based on email uniqueness
+    // Generate a unique code and corresponding QR code
     const generateCode = async () => {
         if (!name.trim() || !email.trim()) {
             setErrorMessage("Please enter your name and email to generate a code.");
@@ -28,15 +28,21 @@ function App() {
             setUniqueCode(code);
             setErrorMessage(null);
 
-            // Generate QR code image
-            const qrImageUrl = await QRCode.toDataURL(`${window.location.origin}/?code=${code}`);
+            // Generate QR code image that points to the backend verification endpoint
+            const qrImageUrl = await QRCode.toDataURL(`${baseURL}/verify-code?code=${code}`);
             setQrCodeImage(qrImageUrl);
         } catch (error) {
-            setErrorMessage(error.response?.data.message || "Error generating code.");
+            setErrorMessage(error.response?.data?.message || "Error generating code.");
         }
     };
 
+    // Verify the generated code with the backend
     const verifyCode = async () => {
+        if (!uniqueCode) {
+            setVerificationMessage("Please generate a code first.");
+            return;
+        }
+
         try {
             const response = await axios.get(`${baseURL}/verify-code`, {
                 params: { code: uniqueCode },
