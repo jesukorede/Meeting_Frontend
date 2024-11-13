@@ -58,7 +58,7 @@ function App() {
         <div
             className="container"
             style={{
-                backgroundImage: `url(public/ALCI.jpeg)`,  // Background image from public folder
+                backgroundImage: `url(public/window-with-golden-frame-yellow-sunset-top (4).jpg)`,  // Background image from public folder
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 height: '100vh', // Full viewport height
